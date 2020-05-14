@@ -1,0 +1,11 @@
+[Unit]
+Description = Per OST statistics publisher
+Documentation = https://support.pawsey.org.au/documentation/pages/viewpage.action?pageId=22283924
+# Requires = some sort of lustre mount
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/ost_stats.py
+Restart=always
+RestartSec=30
+
